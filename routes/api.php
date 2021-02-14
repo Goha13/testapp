@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\CheckController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::post('users/updatepassword', [UsersController::class,'updatepassword']);
 Route::post('users/delete', [UsersController::class,'delete']);
 Route::post('users/login', [UsersController::class,'login']);
 Route::post('users/oneuser', [UsersController::class,'oneuser']);
+Route::post('users/check', [CheckController::class,'store']);
+Route::get('users/check', [CheckController::class,'show']);
